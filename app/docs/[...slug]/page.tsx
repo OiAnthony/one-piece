@@ -7,11 +7,11 @@ import {
   DocsCategory,
 } from 'fumadocs-ui/page';
 import { notFound } from 'next/navigation';
-import {
-  type ComponentProps,
-  type FC,
-  type ReactElement,
-  type ReactNode,
+import type {
+  ComponentProps,
+  FC,
+  ReactElement,
+  ReactNode,
 } from 'react';
 import defaultComponents from 'fumadocs-ui/mdx';
 import { Popup, PopupContent, PopupTrigger } from 'fumadocs-twoslash/ui';
@@ -63,12 +63,16 @@ export default async function Page(props: {
         style: 'clerk',
         single: false,
       }}
-      editOnGithub={{
-        repo,
-        owner,
-        sha: 'dev',
-        path,
-      }}
+      {...(repo && owner
+        ? {
+          editOnGithub: {
+            repo,
+            owner,
+            sha: 'master',
+            path,
+          },
+        }
+        : {})}
       article={{
         className: 'max-sm:pb-16',
       }}
