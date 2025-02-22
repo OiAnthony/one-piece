@@ -34,7 +34,7 @@ export default function Page(): React.ReactElement {
         }}
       >
         <h1 className="mb-4 border-b-4 border-fd-foreground pb-2 text-4xl font-bold md:text-5xl">
-          {"Anthony's Blog"}
+          {process.env.NEXT_PUBLIC_APP_NAME}
         </h1>
         <p className="text-sm md:text-base">
           Light and gorgeous. like the moon

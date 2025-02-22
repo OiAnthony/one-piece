@@ -46,7 +46,7 @@ export const baseOptions: BaseLayoutProps = {
       <>
         {logo}
         <span className="font-medium [.uwu_&]:hidden [header_&]:text-[15px]">
-          {"Anthony's Blog"}
+          {process.env.NEXT_PUBLIC_APP_NAME}
         </span>
       </>
     ),
