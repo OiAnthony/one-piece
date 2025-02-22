@@ -3,10 +3,9 @@
   "version": "0.1.3",
   "private": true,
   "scripts": {
-    "build": "pnpm build:pre && next build && pnpm build:post",
+    "build": "pnpm build:pre && next build",
     "build:local": "pnpm dotenv run pnpm build",
     "build:pre": "tsx ./scripts/pre-build.mts",
-    "build:post": "tsx ./scripts/post-build.mts",
     "clean": "rimraf .next",
     "dev": "next dev --turbo",
     "lint": "fumadocs-mdx && tsx ./scripts/lint.mts && eslint .",
